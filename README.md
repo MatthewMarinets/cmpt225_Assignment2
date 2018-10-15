@@ -5,4 +5,4 @@ Code in LinkedStack.h and LinkedList.h was written based off code provided by CM
 
 Settings and config for VS code are included.
 
-The makefile is currently configured for MinGW on windows -- the target executable name should be changed for Linux.
+The makefile is currently configured for Linux -- the target executable name should be changed to end in ".exe" for MinGW on Windows.
