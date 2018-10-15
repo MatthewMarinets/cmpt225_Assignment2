@@ -1,7 +1,9 @@
+# Written by Matthew Marinets
+# Oct 2018
 
 CFLAGS=-g -Wall -Werror -Iinclude
 CC=g++
-EXECUTABLE_NAME=linked_stack.exe
+EXECUTABLE_NAME=LinkedStack
 
 SOURCES:=$(wildcard *.cpp)
 HEADERS:=$(wildcard include/*.h)
@@ -18,5 +20,5 @@ $(OBJDIR)/%.o: %.cpp $(HEADERS)
 .PHONY: clean
 
 clean:
-	rm -f $(OBJDIR)/*.o $(EXECUTABLE_NAME)
-	rmdir $(OBJDIR)
+	rm -rf $(OBJDIR)/*.o $(EXECUTABLE_NAME)
+	if [ -d $(OBJDIR) ]; then rmdir $(OBJDIR); fi  # Remove OBJDIR only if it exists
